@@ -116,15 +116,15 @@ namespace Test
                 try
                 {
 
-                    Tracking newTracking2 = new Tracking(trackingNumberMark);
-                    newTracking2.slug = slugMark;
+                    Tracking trackingToMark = new Tracking(trackingNumberMark);
+                    trackingToMark.slug = slugMark;
                     try {
-                        connection.deleteTracking(newTracking2);
+                        connection.deleteTracking(trackingToMark);
                     }catch(Exception e)
                     {
                         Console.WriteLine("**5" + e.Message);
                     }
-                    connection.createTracking(newTracking2);
+                    connection.createTracking(trackingToMark);
                 }
                 catch (Exception e)
                 {
